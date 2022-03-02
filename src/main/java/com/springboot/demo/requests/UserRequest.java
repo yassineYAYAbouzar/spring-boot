@@ -1,7 +1,6 @@
 package com.springboot.demo.requests;
 
 import lombok.*;
-import org.apache.tomcat.jni.Address;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
@@ -27,5 +26,5 @@ public class UserRequest {
     @Size(min = 8 , max=12)
     private String password;
 
-    private List<Address> addresses;
+    private List<AddressRequest> addresses;
 }

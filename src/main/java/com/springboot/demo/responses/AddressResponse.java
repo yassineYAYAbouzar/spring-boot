@@ -1,13 +1,15 @@
-package com.springboot.demo.requests;
+package com.springboot.demo.responses;
 
 import lombok.*;
 
+import java.util.UUID;
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class AddressRequest {
+public class AddressResponse {
+    private UUID addressId;
     private String city;
     private String country;
     private String street;

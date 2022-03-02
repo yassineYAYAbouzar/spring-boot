@@ -4,6 +4,7 @@ import lombok.*;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 import java.util.UUID;
 
 @Getter
@@ -28,4 +29,7 @@ public class UserEntity implements Serializable {
     private String encryptedPassword;
     @Column(nullable = false)
     private Boolean emailVerificationstatus = false;
+
+    @OneToMany(mappedBy ="user" , cascade = CascadeType.ALL)
+    private List<AddressEntity> addresses;
 }

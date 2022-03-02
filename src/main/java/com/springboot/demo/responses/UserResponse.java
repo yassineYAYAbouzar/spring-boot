@@ -2,6 +2,7 @@ package com.springboot.demo.responses;
 
 import lombok.*;
 
+import java.util.List;
 import java.util.UUID;
 
 @Getter
@@ -14,4 +15,5 @@ public class UserResponse {
     private String firstName;
     private String lastName;
     private String email;
+    private List<AddressResponse> addresses;
 }

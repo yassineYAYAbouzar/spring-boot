@@ -1,8 +1,10 @@
 package com.springboot.demo.shared.dto;
 
+import com.springboot.demo.requests.AddressRequest;
 import lombok.*;
 
 import java.io.Serializable;
+import java.util.List;
 import java.util.UUID;
 
 @Getter
@@ -20,4 +22,6 @@ public class UserDto implements Serializable {
     private String encryptedPassword;
     private String emailVerificationToken;
     private Boolean emailVerificationstatus = false;
+
+    private List<AddressDto> addresses;
 }
